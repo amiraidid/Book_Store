@@ -31,7 +31,7 @@ const addtoCartList = async (req, res) => {
 
         res.status(201).json({ message: "Book added to cart successfully", cartItem });
     } catch (error) {
-        console.error("Error fetching cart item:", error.message);
+        // console.error("Error fetching cart item:", error.message);
         res.status(500).json({ message: error.message });
     }
 };

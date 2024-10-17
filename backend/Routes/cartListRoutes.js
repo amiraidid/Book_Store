@@ -6,6 +6,6 @@ const router = express.Router()
 
 router.route('/:id').post(protect, cartListController.addtoCartList)
 router.route('/').get(cartListController.getDataFromCartList)
-router.route('/:id').delete(protect, cartListController.deleteFromCartList)
+router.route('/:id').delete( protect, cartListController.deleteFromCartList)
 
 module.exports =  router
