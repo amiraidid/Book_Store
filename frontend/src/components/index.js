@@ -1,0 +1,8 @@
+export { default as Header } from './Header'
+export { default as Footer } from './Footer'
+export { default as BookComp } from './BookComp'
+export { default as SingleBookComp } from './SingleBookComp'
+export { default as AdminDrawer } from './AdminDrawer'
+export { default as BookIngo } from './BookInfo'
+export { default as UserInfo } from './UserInfo'
+export { default as AddModel } from './AddModel'
