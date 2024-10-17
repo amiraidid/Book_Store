@@ -7,7 +7,6 @@ function AllRoutes () {
     return (
         <main>
             <Routes>
-                {/* <Route path="/" element={<Home />} /> */}
                 <Route path="/" element={<Books />} />
                 <Route path="/carts" element={<ProtectedRoute><Carts /></ProtectedRoute>} />
                 <Route path="/login" element={<Login />} />
