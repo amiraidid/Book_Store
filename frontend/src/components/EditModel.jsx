@@ -45,7 +45,7 @@ function EditModel({ isOpen, onClose, book }) {
 
   const handleUpdateBtn = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/admin/book/update/${book._id}`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/admin/book/update/${book._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

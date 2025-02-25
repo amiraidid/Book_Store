@@ -32,7 +32,7 @@ function AddModel() {
 
   const handleCreateBtn = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/admin/add-book`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/admin/add-book`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

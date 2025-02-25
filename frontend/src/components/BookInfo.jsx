@@ -23,7 +23,7 @@ function BookInfo({ loading, listOfBooks }) {
 
   const deleteBook = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/admin/book/${id}`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/admin/book/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

@@ -8,8 +8,8 @@ import useFetch from "../hooks/useFetch";
 
 function AdminDrawer() {
 
-    const { listOfBooks, loading } = useFetch('http://localhost:5000/books')
-    const { listOfUsers } = useFetch('http://localhost:5000/admin/users')
+    const { listOfBooks, loading } = useFetch(`${import.meta.env.VITE_API_URL}/books`)
+    const { listOfUsers } = useFetch(`${import.meta.env.VITE_API_URL}/admin/users`)
 
   const [selectedItem, setSelectedItem] = useState("Books");
   const renderContent = () => {
