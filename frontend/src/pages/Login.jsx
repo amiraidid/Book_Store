@@ -15,7 +15,7 @@ function Login() {
 
     const handleLogin = async () => {
         try {
-            const userLogin = await fetch('http://localhost:5000/auth/login', {
+            const userLogin = await fetch(`${import.meta.env.VITE_API_URL}/auth/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

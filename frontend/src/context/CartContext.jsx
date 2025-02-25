@@ -10,7 +10,7 @@ export const CartProvider = ({children}) => {
 
     const addToCarts = async (pid, token) => {
         try {
-            const response = await fetch(`http://localhost:5000/cartlist/${pid}`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/cartlist/${pid}`, {
                 method: "POST",
                 headers: { 
                     'Content-Type': 'application/json',
@@ -32,7 +32,7 @@ export const CartProvider = ({children}) => {
 
     const getCartListFromDatabase = async() => {
         try {
-            const response = await fetch('http://localhost:5000/cartlist')
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/cartlist`)
             if (!response.ok) {
                 throw new Error("an error happen")
             }
@@ -47,7 +47,7 @@ export const CartProvider = ({children}) => {
 
     const removeFromCarts = async(id, token) => {
         try {
-            const removedItem = await fetch(`http://localhost:5000/cartlist/${id}`, {
+            const removedItem = await fetch(`${import.meta.env.VITE_API_URL}/cartlist/${id}`, {
                 method: "DELETE",
                 headers: {
                     'Content-Type': 'application/json',

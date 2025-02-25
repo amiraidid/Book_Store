@@ -19,7 +19,11 @@ function Books() {
   const fetchBooks = async () => {
     try {
       setLoading(true);
+<<<<<<< HEAD
       const response = await fetch("http://localhost:5000/books");
+=======
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/books`);
+>>>>>>> ca22156 (fixed api bugs)
       if (!response.ok) throw new Error(response.status);
 
       const data = await response.json();
@@ -40,7 +44,11 @@ function Books() {
 
     try {
       setSearchLoading(true);
+<<<<<<< HEAD
       const res = await fetch(`http://localhost:5000/books/book/${searchInput}`);
+=======
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/books/book/${searchInput}`);
+>>>>>>> ca22156 (fixed api bugs)
       if (!res.ok) throw new Error("Error occurred while fetching book");
 
       const result = await res.json();

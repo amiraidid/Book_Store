@@ -16,7 +16,7 @@ function Carts() {
         const getCartListFromDatabase = async() => {
             try {
                 setLoading(true)
-                const response = await fetch('http://localhost:5000/cartlist')
+                const response = await fetch(`${import.meta.env.VITE_API_URL}/cartlist`)
                 if (!response.ok) {
                     throw new Error("an error happen")
                 }

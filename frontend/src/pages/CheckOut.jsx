@@ -27,7 +27,7 @@ function CheckOut() {
       try {
         setLoading(true);
         const response = await fetch(
-          `http://localhost:5000/books/checkout/${params.id}`
+          `${import.meta.env.VITE_API_URL}/books/checkout/${params.id}`
         );
         if (!response.ok) {
           throw new Error("an error happen");
